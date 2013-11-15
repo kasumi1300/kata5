@@ -6,6 +6,10 @@ public class Kata5 {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        MockMailLoader loader = new MockMailLoader();
+        HistogramBuilder<Mail> builder = new HistogramBuilder<>();
+        builder.build(loader.load());
+        HistogramViewer<Mail> viewer = new HistogramViewer<>();
+        viewer.show(builder.getHistogram());
     }
 }
