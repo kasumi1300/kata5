@@ -17,6 +17,5 @@ public class HistogramBuilder<T> {
              histogram.put(attribute, histogram.get(attribute) + 1);
          }
          return histogram;
-    }
-        
+    }        
 }
